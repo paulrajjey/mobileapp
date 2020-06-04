@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">department</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+ 
+  <ion-list>
+    <ion-item *ngFor="let channel of channels"> 
+    <ion-lable> {{channel.name}}- {{channel.section}}</ion-lable>
+    <ion-button (click)='gotnextpage(channel.name)' expand="block" >go to my channel page</ion-button>
+  </ion-item>
+</ion-list>
+<ion-row *ngFor="let channel of channels" >
+  <ion-col>
+    <ion-item  lines="none" (click)="gotnextpage(channel.name)" >
+    <ion-avatar slot="start">
+      <img src='/assets/slack.png'>
+    </ion-avatar>
+    <ion-label>
+      <h3>{{ channel.name | uppercase }}</h3>
+      <!--<h3>{{ partner.address}}</h3>-->
+      <p>{{ channel.section}}</p>
+        
+    </ion-label>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+</ion-content>

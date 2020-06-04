@@ -9,7 +9,20 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
+    //redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'department',
+    loadChildren: () => import('./department/department.module').then( m => m.DepartmentPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 
