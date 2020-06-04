@@ -57,10 +57,8 @@
 <ion-list>
   <ion-item *ngFor="let country of countries"> 
   <ion-label> {{country.Country}}- {{country.Slug}}-{{country.ISO2}}</ion-label>
+  <ion-button (click)='navigatetoChane(country.Country)' > Hitory </ion-button>
 </ion-item>
-<ion-item>
-  <ion-button click("navigatetoChane(chann.id)")> Hitory </ion-button>
-</ion-item>>
 </ion-list>
 
   <ion-button size="large"  (click)='navigatetoDep()'>Large</ion-button>

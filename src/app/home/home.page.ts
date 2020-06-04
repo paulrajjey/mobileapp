@@ -34,6 +34,7 @@ export class HomePage {
 
   }
   navigatetoChane(id){
+    console.log('id is ' + id);
     this.route.navigate(['department'], id);
   }
 }

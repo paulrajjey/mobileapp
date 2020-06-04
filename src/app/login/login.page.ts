@@ -18,12 +18,14 @@ error: string;
   }
   login(){
     console.log('userid', this.userid)  ;
-    console.log('userid', this.password);
+    console.log('password', this.password);
     if( this.password !== 'jey'){
       console.log('userid', this.password);
       this.error = 'invlaid password';
     }else {
-    this.router.navigate(['/home']);
+    //this.router.navigate(['home', '']);
+    this.router.navigate(['home']);
+
   }
   }
 }
