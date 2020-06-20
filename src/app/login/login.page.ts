@@ -15,6 +15,7 @@ error: string;
   constructor(public router: Router) { }
 
   ngOnInit() {
+    
   }
   login(){
     console.log('userid', this.userid)  ;
